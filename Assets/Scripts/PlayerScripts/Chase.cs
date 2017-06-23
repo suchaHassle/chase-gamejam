@@ -22,4 +22,12 @@ public class Chase : MonoBehaviour
         //NavMeshAgent.destination property with the point you want the agent to move to. 
         //As soon as the calculation is finished, the agent will automatically move along the path until it reaches its destination.
     }
+
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.collider.CompareTag("Player"))
+        {
+            Debug.Log("HIT");
+        }
+    }
 }
