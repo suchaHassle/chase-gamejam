@@ -9,6 +9,7 @@ public class FloorGeneration : MonoBehaviour {
     public int boardWidth = 10;
     public GameObject prefab; 
     public int count = 0;
+    public int highScore = 0;
 
 	// Use this for initialization
 	void Start () {

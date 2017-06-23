@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.AI; //needed for the NavMeshAgent property to be used
 
@@ -27,7 +28,9 @@ public class Chase : MonoBehaviour
     {
         if (col.collider.CompareTag("Player"))
         {
-            Debug.Log("HIT");
+            int playerScore = GameObject.Find("Tile").GetComponent<FloorGeneration>().count;
+            GameObject.Find("HighScore").GetComponent<HighScoreKeeper>().playerScore = playerScore;
+            SceneManager.LoadScene("Game Over");
         }
     }
 }

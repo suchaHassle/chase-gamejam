@@ -26,8 +26,6 @@ public class Tile : MonoBehaviour {
     {
         if (col.collider.CompareTag("Player"))
         {
-            setColor(Color.blue);
-
             MeshRenderer mr = this.gameObject.GetComponent<MeshRenderer>();
 
             if (mr)
@@ -36,6 +34,8 @@ public class Tile : MonoBehaviour {
                 if (materialCopy.color != Color.blue)
                     GameObject.Find("Tile").GetComponent<FloorGeneration>().count++;
             }
+
+            setColor(Color.blue);
         }
     }
 }
