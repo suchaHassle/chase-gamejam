@@ -10,9 +10,10 @@ public class FloorGeneration : MonoBehaviour {
     public GameObject prefab; 
     public int count = 0;
     public int highScore = 0;
+    public int caseSwitch = 1;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         tiles = new Tile[boardHeight, boardWidth];
 
         for (int col = 0; col < boardWidth; ++col)
