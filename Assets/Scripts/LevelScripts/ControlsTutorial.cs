@@ -32,11 +32,11 @@ public class ControlsTutorial : MonoBehaviour
 			Cursor.lockState = CursorLockMode.Locked;
 			Cursor.visible = false;
 		}
-		if (Input.GetKeyDown("escape"))
-		{
-			Cursor.lockState = CursorLockMode.Locked;
-			Cursor.visible = true;
-		}
+        if (Input.GetKeyDown("escape"))
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = true;
+        }
 	}
 
 	void OnGUI()

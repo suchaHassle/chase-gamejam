@@ -1,22 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
+using UnityEngine.AI; //needed for the NavMeshAgent property to be used
 
 public class Chase : MonoBehaviour
 {
-    public Transform goal;
+    public Transform goal; //this is where we will input the players object name
 
     // Use this for initialization
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        NavMeshAgent agent = GetComponent<NavMeshAgent>();
-        agent.destination = goal.position;
+
+        NavMeshAgent agent = GetComponent<NavMeshAgent>(); //NavMesh is what will make the enemy go to the player
+        agent.destination = goal.position; //enemy(agent) will then go to players(goal) position
+        //NavMeshAgent.destination property with the point you want the agent to move to. 
+        //As soon as the calculation is finished, the agent will automatically move along the path until it reaches its destination.
     }
 }
